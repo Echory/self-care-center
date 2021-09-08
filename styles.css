@@ -6,3 +6,40 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+html {
+min-height: 100%;
+}
+
+body{
+background-size: cover;
+background-repeat:no-repeat;
+background-image: linear-gradient(to bottom, #134d71, #295d80, #3c6d90, #4e7ea0, #608fb0, #649fb9, #6daec0, #7abdc5, #90cabd, #b0d5b6, #d4ddb6, #f7e4bf);
+}
+
+h1{
+display:flex;
+justify-content: center;
+}
+
+img{
+width: 60px;
+height: 60px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+padding: 15px 20px;
+
+}
+
+h2{
+display:flex;
+justify-content: center;
+}
+
+.radio-buttons{
+display:flex;
+justify-content: center;
+padding: 25px 50px;
+
+}
