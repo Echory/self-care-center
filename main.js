@@ -40,4 +40,8 @@ receiveMsgBtn.addEventListener('click', showMessage);
 
 function showMessage() {
   var msgOption = document.querySelector('input[name="message"]:checked').value;
+  console.log(msgOption)
 }
+// if msgOption is = affirmation pull a random string from var affirmation else
+//pull a random mantra
+// when message is shown, remove img
