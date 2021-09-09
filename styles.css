@@ -14,32 +14,52 @@ body{
 background-size: cover;
 background-repeat:no-repeat;
 background-image: linear-gradient(to bottom, #134d71, #295d80, #3c6d90, #4e7ea0, #608fb0, #649fb9, #6daec0, #7abdc5, #90cabd, #b0d5b6, #d4ddb6, #f7e4bf);
+font-family: 'Quicksand', sans-serif;
 }
 
 h1{
 display:flex;
 justify-content: center;
+color: white;
 }
 
 img{
-width: 60px;
-height: 60px;
+width: 70px;
+height: 70px;
 display: block;
 margin-left: auto;
 margin-right: auto;
 width: 50%;
-padding: 15px 20px;
-
+background-color: white;
+padding: 30px 70px;
+border-radius: 15px;
 }
 
 h2{
 display:flex;
 justify-content: center;
+color: white;
 }
 
 .radio-buttons{
 display:flex;
 justify-content: center;
 padding: 25px 50px;
+}
 
+button{
+  color: white;
+  background-color: #134d71;
+  padding: 5px 5px;
+}
+
+.choose-message{
+  background-color: white;
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 50%;
+  border-radius: 15px;
 }
