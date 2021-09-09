@@ -33,3 +33,11 @@ var mantras = [
 'Onward and upward.',
 'I am the sky, the rest is weather.'
 ];
+
+var receiveMsgBtn = document.querySelector('.receive-message');
+
+receiveMsgBtn.addEventListener('click', showMessage);
+
+function showMessage() {
+  var msgOption = document.querySelector('input[name="message"]:checked').value;
+}
