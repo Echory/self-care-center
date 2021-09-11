@@ -40,8 +40,16 @@ receiveMsgBtn.addEventListener('click', showMessage);
 
 function showMessage() {
   var msgOption = document.querySelector('input[name="message"]:checked').value;
-  console.log(msgOption)
+  var randomMsg;
+
+  if(msgOption === 'affirmation'){
+    randomMsg = affirmations[Math.floor(Math.random()*affirmations.length)];
+  } else {
+    randomMsg = mantras[Math.floor(Math.random()*mantras.length)];
+  }
+  document.getElementById("message-container").textContent = randomMsg;
+
+  // var message = document.getElementsByClassName('.message-container');
 }
-// if msgOption is = affirmation pull a random string from var affirmation else
-//pull a random mantra
+
 // when message is shown, remove img

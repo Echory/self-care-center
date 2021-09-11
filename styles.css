@@ -24,16 +24,14 @@ color: white;
 margin-bottom: 7%;
 }
 
-img{
-width: 70px;
-height: 70px;
-display: block;
-margin-left: auto;
-margin-right: auto;
+#message-container{
+margin: 0 auto;
 width: 50%;
 background-color: white;
 padding: 30px 70px;
 border-radius: 10px;
+text-align: center;
+font-size: 21px;
 }
 
 h2{
@@ -73,4 +71,10 @@ button{
   margin-bottom: 110px;
   width: 50%;
   border-radius: 10px;
+}
+
+img{
+  display: block;
+  width: 13%;
+  margin: 0 auto;
 }
