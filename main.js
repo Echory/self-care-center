@@ -34,23 +34,34 @@ var mantras = [
 'I am the sky, the rest is weather.'
 ];
 
+var savedMessages = [];
+
+var randomMsg;
+
 var receiveMsgBtn = document.querySelector('.receive-message');
 
 receiveMsgBtn.addEventListener('click', showMessage);
 
 function showMessage() {
   var msgOption = document.querySelector('input[name="message"]:checked').value;
-  var randomMsg;
 
   if(msgOption === 'affirmation'){
     randomMsg = affirmations[Math.floor(Math.random()*affirmations.length)];
   } else {
     randomMsg = mantras[Math.floor(Math.random()*mantras.length)];
   }
-  document.getElementById("message-container").textContent = randomMsg;
+  document.getElementById("message-container").innerHTML = `<p>${randomMsg}</p> <button class="save">Save to favorites</button>`;
+  var saveBtn = document.querySelector('.save');
+  saveBtn.addEventListener('click', saveMsg);
 }
 
-//Add a favorite button when message appears 
+function saveMsg() {
+  savedMessages.push(randomMsg);
+  //find out what random msg is and then push to array called saved messages
+}
+
+
+//Add a favorite button when message appears
 //When user clicks fav button, message is saved to favorites array
 //Add button to main page that will take user to favorites page
 //User should be able to remove message by clicking a button
