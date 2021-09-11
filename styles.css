@@ -78,3 +78,10 @@ img{
   width: 13%;
   margin: 0 auto;
 }
+
+.view-favorites{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}

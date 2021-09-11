@@ -48,8 +48,10 @@ function showMessage() {
     randomMsg = mantras[Math.floor(Math.random()*mantras.length)];
   }
   document.getElementById("message-container").textContent = randomMsg;
-
-  // var message = document.getElementsByClassName('.message-container');
 }
 
-// when message is shown, remove img
+//Add a favorite button when message appears 
+//When user clicks fav button, message is saved to favorites array
+//Add button to main page that will take user to favorites page
+//User should be able to remove message by clicking a button
+//There should be a button back to main page
