@@ -35,12 +35,16 @@ var mantras = [
 ];
 
 var savedMessages = [];
-
 var randomMsg;
 
 var receiveMsgBtn = document.querySelector('.receive-message');
+var viewFavBtn = document.querySelector('.view-favorites');
+var saved = document.querySelector('.messages-saved');
+var choosePage = document.querySelector('.main-body');
 
 receiveMsgBtn.addEventListener('click', showMessage);
+viewFavBtn.addEventListener('click', showFavs)
+
 
 function showMessage() {
   var msgOption = document.querySelector('input[name="message"]:checked').value;
@@ -51,14 +55,38 @@ function showMessage() {
     randomMsg = mantras[Math.floor(Math.random()*mantras.length)];
   }
   document.getElementById("message-container").innerHTML = `<p>${randomMsg}</p> <button class="save">Save to favorites</button>`;
+
   var saveBtn = document.querySelector('.save');
+
   saveBtn.addEventListener('click', saveMsg);
 }
 
 function saveMsg() {
   savedMessages.push(randomMsg);
-  //find out what random msg is and then push to array called saved messages
+
+  var savedPage = document.querySelector('.messages-saved').innerHTML = `<p>${savedMessages}</p>`;
 }
+
+function showFavs() {
+saved.classList.remove('hidden');
+choosePage.classList.add('hidden');
+}
+
+
+// function saveMsg() {
+  // savedMessages.push(randomMsg);
+
+  // hide current html
+  // show favorite list html
+
+
+  // insert savedMessages array into html
+
+  // GOOGLE how to insert array of strings into HTML
+// }
+
+
+
 
 
 //Add a favorite button when message appears

@@ -9,7 +9,10 @@
     <div class="header">
     <h1>✨Self Care Center✨</h1>
   </div>
+
+ <div class="main-body">
      <h2>Which Type Of Message?</h2>
+
      <div class="choose-message" style="text-align:center">
      <div class="radio-buttons">
        <input type="radio" id="affirmation" name="message" value="affirmation" checked>
@@ -21,13 +24,19 @@
        <button class="receive-message" type="button">Receive Message</button>
      </div>
    </div>
-   <div id="message-container">
+   <div class="message-container" id="message-container">
      <img src="assets/meditate.svg" alt="meditating person">
    </div>
-   <a href="favorites.html">
+
   <button class="view-favorites">View Favorites</button>
-</a>
-   <!-- <button class="view-favorites">View Favorite Messages</button> -->
+</div>
+    <div class="messages-saved hidden" id="message-container">
+    </div>
+
+  <!-- <ul id="favorite-list">
+
+  </ul> -->
+
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

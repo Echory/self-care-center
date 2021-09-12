@@ -24,7 +24,11 @@ color: white;
 margin-bottom: 7%;
 }
 
-#message-container{
+.hidden {
+  display: none;
+}
+
+.message-container{
 margin: 0 auto;
 width: 50%;
 background-color: white;
@@ -33,6 +37,17 @@ border-radius: 10px;
 text-align: center;
 font-size: 21px;
 }
+
+.messages-saved{
+  margin: 0 auto;
+  width: 50%;
+  background-color: white;
+  padding: 30px 70px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 21px;
+}
+
 
 h2{
 display:flex;
