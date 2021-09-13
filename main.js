@@ -34,9 +34,6 @@ var mantras = [
 'I am the sky, the rest is weather.'
 ];
 
-var savedMessages = [];
-var randomMsg;
-
 var receiveMsgBtn = document.querySelector('.receive-message');
 var viewFavBtn = document.querySelector('.view-favorites');
 var saved = document.querySelector('.messages-saved');
@@ -47,10 +44,19 @@ receiveMsgBtn.addEventListener('click', showMessage);
 viewFavBtn.addEventListener('click', showFavs)
 backBtn.addEventListener('click', backToMain);
 
-backBtn.classList.add('invisible');
-
+var savedMessages = [];
+var randomMsg;
 
 function showMessage() {
+  setMessage()
+  
+  document.getElementById("message-container").innerHTML = `<p>${randomMsg}</p> <button class="save">Save to favorites</button>`;
+
+  var saveBtn = document.querySelector('.save');
+  saveBtn.addEventListener('click', saveMsg);
+}
+
+function setMessage() {
   var msgOption = document.querySelector('input[name="message"]:checked').value;
 
   if(msgOption === 'affirmation'){
@@ -58,23 +64,18 @@ function showMessage() {
   } else {
     randomMsg = mantras[Math.floor(Math.random()*mantras.length)];
   }
-  document.getElementById("message-container").innerHTML = `<p>${randomMsg}</p> <button class="save">Save to favorites</button>`;
-
-  var saveBtn = document.querySelector('.save');
-
-  saveBtn.addEventListener('click', saveMsg);
 }
 
 function saveMsg() {
   savedMessages.push(randomMsg);
 
-  var savedPage = document.querySelector('.messages-saved').innerHTML = `<p>${savedMessages}</p>`;
+  document.querySelector('.messages-saved').innerHTML = `<p>${savedMessages}</p>`;
 }
 
 function showFavs() {
-saved.classList.remove('hidden');
-choosePage.classList.add('hidden');
-backBtn.classList.remove('hidden');
+  saved.classList.remove('hidden');
+  choosePage.classList.add('hidden');
+  backBtn.classList.remove('hidden');
 }
 
 function backToMain(){
@@ -82,24 +83,3 @@ function backToMain(){
   choosePage.classList.remove('hidden');
   backBtn.classList.add('hidden');
 }
-// function saveMsg() {
-  // savedMessages.push(randomMsg);
-
-  // hide current html
-  // show favorite list html
-
-
-  // insert savedMessages array into html
-
-  // GOOGLE how to insert array of strings into HTML
-// }
-
-
-
-
-
-//Add a favorite button when message appears
-//When user clicks fav button, message is saved to favorites array
-//Add button to main page that will take user to favorites page
-//User should be able to remove message by clicking a button
-//There should be a button back to main page
