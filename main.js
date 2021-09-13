@@ -41,9 +41,13 @@ var receiveMsgBtn = document.querySelector('.receive-message');
 var viewFavBtn = document.querySelector('.view-favorites');
 var saved = document.querySelector('.messages-saved');
 var choosePage = document.querySelector('.main-body');
+var backBtn = document.querySelector('.back-to-main');
 
 receiveMsgBtn.addEventListener('click', showMessage);
 viewFavBtn.addEventListener('click', showFavs)
+backBtn.addEventListener('click', backToMain);
+
+backBtn.classList.add('invisible');
 
 
 function showMessage() {
@@ -70,9 +74,14 @@ function saveMsg() {
 function showFavs() {
 saved.classList.remove('hidden');
 choosePage.classList.add('hidden');
+backBtn.classList.remove('hidden');
 }
 
-
+function backToMain(){
+  saved.classList.add('hidden');
+  choosePage.classList.remove('hidden');
+  backBtn.classList.add('hidden');
+}
 // function saveMsg() {
   // savedMessages.push(randomMsg);
 

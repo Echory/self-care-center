@@ -88,6 +88,11 @@ button{
   border-radius: 10px;
 }
 
+.back-to-main{
+  background-color: transparent;
+  border: none;
+}
+
 img{
   display: block;
   width: 13%;
